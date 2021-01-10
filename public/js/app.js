@@ -12,7 +12,7 @@ button.addEventListener('submit',  (e) =>{
     console.log(location);
 
     msg1.textContent = "loading"
-    fetch(`http://127.0.0.1:3000/weather?search=${location}`).then((response) =>{
+    fetch(`/weather?search=${location}`).then((response) =>{
     response.json().then((data) =>{
         if (data.error){
             console.log('invalid search')
